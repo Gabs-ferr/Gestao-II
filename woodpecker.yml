@@ -1,0 +1,33 @@
+steps:
+  hello-world:
+    image: alpine
+    commands:
+      - echo "=========================================="
+      - echo "         Hello, World!                    "
+      - echo "  Demonstração prática - Woodpecker CI    "
+      - echo "=========================================="
+      - echo "Repositório integrado com sucesso!"
+      - echo ""
+      - echo ">> Etapa 1: Preparando ambiente..."
+      - sleep 1
+      - echo "Ambiente pronto."
+
+  simulando-testes:
+    image: alpine
+    commands:
+      - echo ">> Etapa 2: Executando testes automatizados (simulação)..."
+      - echo "[TEST] test_login .............. OK"
+      - echo "[TEST] test_cadastro_usuario ... OK"
+      - echo "[TEST] test_api_status ......... OK"
+      - echo "[TEST] test_conexao_banco ...... OK"
+      - echo "Todos os testes passaram com sucesso!"
+
+  finalizando:
+    image: alpine
+    commands:
+      - echo ">> Etapa 3: Build/Deploy concluído (simulação)."
+      - echo "Pipeline executado em:"
+      - date
+      - echo "=========================================="
+      - echo "  Pipeline finalizado com sucesso :)      "
+      - echo "=========================================="
