@@ -31,3 +31,13 @@ steps:
       - echo "=========================================="
       - echo "  Pipeline finalizado com sucesso :)      "
       - echo "=========================================="
+
+  finalizando pra valer hehhe:
+    image: alpine
+    commands:
+      - 'echo ">> Etapa 4: Build/Deploy concluído pra valer (simulação)."'
+      - echo "Pipeline executado em:"
+      - date
+      - echo "=========================================="
+      - echo "  Pipeline finalizado com sucesso part 2 :)      "
+      - echo "=========================================="
