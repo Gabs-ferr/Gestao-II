@@ -25,7 +25,7 @@ steps:
   teste-falho:
     image: alpine
     commands:
-      - echo ">> Etapa extra: Testando cenário de falha proposital"
+      - 'echo ">> Etapa extra: Testando cenário de falha proposital"'
       - echo "[TEST] test_pagamento_invalido ... FAIL"
       - echo "Erro: valor recebido não corresponde ao esperado"
 
