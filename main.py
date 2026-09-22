@@ -1,1 +1,1 @@
-print("pink up")
+print("Olá")
