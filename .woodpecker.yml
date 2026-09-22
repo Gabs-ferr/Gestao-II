@@ -22,6 +22,14 @@ steps:
       - echo "[TEST] test_conexao_banco ...... OK"
       - echo "Todos os testes passaram com sucesso!"
 
+  teste-falho:
+    image: alpine
+    commands:
+      - echo ">> Etapa extra: Testando cenário de falha proposital"
+      - echo "[TEST] test_pagamento_invalido ... FAIL"
+      - echo "Erro: valor recebido não corresponde ao esperado"
+      - exit 1
+      
   finalizando:
     image: alpine
     commands:
@@ -30,14 +38,4 @@ steps:
       - date
       - echo "=========================================="
       - echo "  Pipeline finalizado com sucesso :)      "
-      - echo "=========================================="
-
-  finalizando pra valer hehhe:
-    image: alpine
-    commands:
-      - 'echo ">> Etapa 4: Build/Deploy concluído pra valer (simulação)."'
-      - echo "Pipeline executado em:"
-      - date
-      - echo "=========================================="
-      - echo "  Pipeline finalizado com sucesso part 2 :)      "
       - echo "=========================================="
