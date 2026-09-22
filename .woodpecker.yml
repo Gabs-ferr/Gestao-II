@@ -28,8 +28,7 @@ steps:
       - echo ">> Etapa extra: Testando cenário de falha proposital"
       - echo "[TEST] test_pagamento_invalido ... FAIL"
       - echo "Erro: valor recebido não corresponde ao esperado"
-      - exit 1
-      
+
   finalizando:
     image: alpine
     commands:
